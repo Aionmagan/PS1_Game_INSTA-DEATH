@@ -1,0 +1,19 @@
+output = data
+#start_address=80091000
+start_address=80090000
+
+data = PLAYER.TIM
+data = ZOMBIE.TIM
+data = LEVEL1.TIM
+data = NY_TITLE.TIM
+
+string = 0 .h "#define ~LABEL (u_long *)0x~ADDRESS"
+
+#Finish off the .mak file with the program load
+path=
+string=1 .mak "local load ~FILE"
+data=main.exe
+
+#Print "Go" into the .mak file
+print 1 =go
+
